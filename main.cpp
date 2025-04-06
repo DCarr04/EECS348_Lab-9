@@ -32,11 +32,11 @@ int main(int argc, char *argv[]) {
             
             if(rowCounter < size){
                 if(line.size() == size){
-                    for(int i = 0; i < size; i++){
-                        preInt_data.push_back(line[i]);
-                        data = stoi(preInt_data);
+                    for(int i = 0; i < size; i + 3){
+                        //preInt_data.push_back(line.substr(i, 2));
+                        data = stoi(line.substr(i, 2));
                         nums[rowCounter][i] = data;
-                        preInt_data.pop_back();
+                        //preInt_data.pop_back();
                     }
                     ++rowCounter;
                 }
@@ -44,10 +44,10 @@ int main(int argc, char *argv[]) {
             }else{
                 if (line.size() == size){
                     for(int j = 0; j < size; j++){
-                        preInt_data.push_back(line[j]);
-                        data = stoi(preInt_data);
+                        //preInt_data.push_back(line[j]);
+                        data = stoi(line.substr(j, 2));
                         nums2[rowCounter - size][j] = data;
-                        preInt_data.pop_back();
+                        //preInt_data.pop_back();
                     }
                     ++rowCounter;
                 }
