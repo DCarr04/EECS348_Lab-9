@@ -12,7 +12,7 @@ private:
     std::vector<std::vector<int> > data;
 public:
     Matrix(std::size_t N);
-    Matrix(std::vector<std::vector<int>> nums);
+    Matrix(std::vector<std::vector<int> > nums);
 
     Matrix operator+(const Matrix &rhs) const;
     Matrix operator*(const Matrix &rhs) const;
