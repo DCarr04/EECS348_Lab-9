@@ -51,21 +51,16 @@ int main(int argc, char *argv[]) {
             
             if(rowCounter < size){
                 vector<string> entries = split(line, ' ');
-                while( i < line.size()){
                 
-                    entries.push_back(line.substr(i, line.find(" ")));
-                    
-
+                
+                for(int i = 0; i < entries.size(); i++){
+                    //preInt_data.push_back(line.substr(i, 2));
+                    data = stoi(entries[i]);
+                    nums[rowCounter][i] = data;
+                    //preInt_data.pop_back();
                 }
-                if(line.size() == size){
-                    for(int i = 0; i < size; i + 3){
-                        //preInt_data.push_back(line.substr(i, 2));
-                        data = stoi(line.substr(i, 2));
-                        nums[rowCounter][i] = data;
-                        //preInt_data.pop_back();
-                    }
-                    ++rowCounter;
-                }
+                ++rowCounter;
+                
                 //++sizeTracker;
             }else{
                 if (line.size() == size){
