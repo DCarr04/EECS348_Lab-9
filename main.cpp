@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
                 for(int i = 0; i < entries.size(); i++){
                     //preInt_data.push_back(line.substr(i, 2));
                     data = stoi(entries[i]);
-                    nums2[rowCounter][i] = data;
+                    nums2[rowCounter - size][i] = data;
                     //preInt_data.pop_back();
                 }
                 ++rowCounter;
