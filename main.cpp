@@ -13,6 +13,7 @@ int main(int argc, char *argv[]) {
     int data;
     int size;
     int sizeTracker = 0;
+    int int_or_dbl;
     string preInt_data;
     cout << "Enter a file: ";
     cin >> file;
@@ -23,8 +24,9 @@ int main(int argc, char *argv[]) {
     if (myfile.is_open()){
         while(getline(myfile, line)){
             //Matrix myMatrix();
-            if (line.size() == 1){
-                size = stoi(line);
+            if (line.size() == 3){
+                size = stoi(line.substr(0));
+                int_or_dbl = stoi(line.substr(2));
                 //Matrix myMatrix(size);
             }
             
