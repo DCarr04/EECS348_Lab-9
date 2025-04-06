@@ -29,15 +29,15 @@ int main(int argc, char *argv[]) {
     int rowCounter = 0;
     int data;
     int size;
-    int sizeTracker = 0;
+    //int sizeTracker = 0;
     int int_or_dbl;
-    string preInt_data;
+    //string preInt_data;
     cout << "Enter a file: ";
     cin >> file;
     ifstream myfile (file);
     vector<vector<int> > nums;
     vector<vector<int> > nums2;
-    string delimiter = " ";
+    //string delimiter = " ";
 
     if (myfile.is_open()){
         while(getline(myfile, line)){
@@ -63,15 +63,14 @@ int main(int argc, char *argv[]) {
                 
                 //++sizeTracker;
             }else{
-                if (line.size() == size){
-                    for(int j = 0; j < size; j++){
-                        //preInt_data.push_back(line[j]);
-                        data = stoi(line.substr(j, 2));
-                        nums2[rowCounter - size][j] = data;
-                        //preInt_data.pop_back();
-                    }
-                    ++rowCounter;
+                vector<string> entries = split(line, ' ');
+                for(int i = 0; i < entries.size(); i++){
+                    //preInt_data.push_back(line.substr(i, 2));
+                    data = stoi(entries[i]);
+                    nums2[rowCounter][i] = data;
+                    //preInt_data.pop_back();
                 }
+                ++rowCounter;
                 //++sizeTracker;
             }
             
