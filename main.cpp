@@ -58,14 +58,21 @@ int main(int argc, char *argv[]) {
                 cout << "Got here4" << endl;
                 if(rowCounter < size){
                     cout << "Got here5" << endl;
+                    cout << "\tsize:" << size << endl;
                     vector<string> entries = split(line, ' ');
                     
                     
                     for(int i = 0; i < entries.size(); i++){
                         //preInt_data.push_back(line.substr(i, 2));
                         data = stoi(entries[i]);
+                        cout << "\tdata at entries[i]:" << data << endl;
+                        cout << "\trowCounter:" << rowCounter << endl;
+                        cout << "\ti:" << i << endl;
+                        cout << "\tnums[0][0]:" << nums[0][0] << endl;
                         nums[rowCounter][i] = data;
+                        cout << "Got here5.5" << endl;
                         //preInt_data.pop_back();
+                        
                     }
                     ++rowCounter;
                     cout << "Got here6" << endl;

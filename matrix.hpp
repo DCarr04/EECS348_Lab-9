@@ -9,8 +9,9 @@
 class Matrix {
 private: 
     size_t size;
-    std::vector<std::vector<int> > data;
+    
 public:
+    std::vector<std::vector<int> > data;
     Matrix(std::size_t N);
     Matrix(std::vector<std::vector<int> > nums);
     ~Matrix();
