@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     string line;
     int rowCounter = 0;
     int data;
-    int size;
+    int size = 0;
     //int sizeTracker = 0;
     int int_or_dbl;
     //string preInt_data;
@@ -38,18 +38,22 @@ int main(int argc, char *argv[]) {
     vector<vector<int> > nums;
     vector<vector<int> > nums2;
     //string delimiter = " ";
-
+    cout << "Got here" << endl;
     if (myfile.is_open()){
+        cout << "Got here2" << endl;
         while(getline(myfile, line)){
+            cout << "Got here3" << endl;
             int i = 0;
             //Matrix myMatrix();
             if (line.size() == 3){
                 size = stoi(line.substr(0));
                 int_or_dbl = stoi(line.substr(2));
+                cout << "Got here3.5" << endl;
                 //Matrix myMatrix(size);
             }
-            
+            cout << "Got here4" << endl;
             if(rowCounter < size){
+                cout << "Got here5" << endl;
                 vector<string> entries = split(line, ' ');
                 
                 
@@ -60,30 +64,35 @@ int main(int argc, char *argv[]) {
                     //preInt_data.pop_back();
                 }
                 ++rowCounter;
-                
+                cout << "Got here6" << endl;
                 //++sizeTracker;
             }else{
+                cout << "Got here7" << endl;
                 vector<string> entries = split(line, ' ');
                 for(int i = 0; i < entries.size(); i++){
+                    cout << "Got here8" << endl;
                     //preInt_data.push_back(line.substr(i, 2));
                     data = stoi(entries[i]);
                     nums2[rowCounter - size][i] = data;
                     //preInt_data.pop_back();
                 }
                 ++rowCounter;
+                cout << "Got here9" << endl;
                 //++sizeTracker;
             }
-            
+            cout << "Got here10" << endl;
             //myMatrix(nums);
             
             
         }
+        cout << "Got here11" << endl;
         Matrix myMatrix(nums);
         if(nums2.size() != 0){
             Matrix myMatrix2(nums2);
         }
         myMatrix.print_matrix();
     }
+    myfile.close();
     
 
     return 0;
