@@ -51,37 +51,43 @@ int main(int argc, char *argv[]) {
                 cout << "Got here3.5" << endl;
                 //Matrix myMatrix(size);
             }
-            cout << "Got here4" << endl;
-            if(rowCounter < size){
-                cout << "Got here5" << endl;
-                vector<string> entries = split(line, ' ');
-                
-                
-                for(int i = 0; i < entries.size(); i++){
-                    //preInt_data.push_back(line.substr(i, 2));
-                    data = stoi(entries[i]);
-                    nums[rowCounter][i] = data;
-                    //preInt_data.pop_back();
-                }
-                ++rowCounter;
-                cout << "Got here6" << endl;
-                //++sizeTracker;
-            }else{
-                cout << "Got here7" << endl;
-                vector<string> entries = split(line, ' ');
-                for(int i = 0; i < entries.size(); i++){
-                    cout << "Got here8" << endl;
-                    //preInt_data.push_back(line.substr(i, 2));
-                    data = stoi(entries[i]);
-                    nums2[rowCounter - size][i] = data;
-                    //preInt_data.pop_back();
-                }
-                ++rowCounter;
-                cout << "Got here9" << endl;
-                //++sizeTracker;
+            else if(line.size() == 0){
+
             }
-            cout << "Got here10" << endl;
-            //myMatrix(nums);
+            else{
+                cout << "Got here4" << endl;
+                if(rowCounter < size){
+                    cout << "Got here5" << endl;
+                    vector<string> entries = split(line, ' ');
+                    
+                    
+                    for(int i = 0; i < entries.size(); i++){
+                        //preInt_data.push_back(line.substr(i, 2));
+                        data = stoi(entries[i]);
+                        nums[rowCounter][i] = data;
+                        //preInt_data.pop_back();
+                    }
+                    ++rowCounter;
+                    cout << "Got here6" << endl;
+                    //++sizeTracker;
+                }else{
+                    cout << "Got here7" << endl;
+                    vector<string> entries = split(line, ' ');
+                    for(int i = 0; i < entries.size(); i++){
+                        cout << "Got here8" << endl;
+                        //preInt_data.push_back(line.substr(i, 2));
+                        data = stoi(entries[i]);
+                        nums2[rowCounter - size][i] = data;
+                        //preInt_data.pop_back();
+                    }
+                    ++rowCounter;
+                    cout << "Got here9" << endl;
+                    //++sizeTracker;
+                }
+                cout << "Got here10" << endl;
+                //myMatrix(nums);
+            
+            }
             
             
         }
