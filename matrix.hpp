@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <vector>
+#include <string>
 
 // all of your function definitions should be in this file now
 
@@ -11,10 +12,9 @@ private:
     size_t size;
     
 public:
-    std::vector<std::vector<int> > data;
-    //Matrix();
+    std::vector<std::vector<std::string> > data;
     Matrix(std::size_t N);
-    Matrix(std::vector<std::vector<int> > nums);
+    Matrix(std::vector<std::vector<std::string> > nums);
     ~Matrix();
 
     Matrix operator+(const Matrix &rhs) const;
