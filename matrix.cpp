@@ -127,6 +127,6 @@ void Matrix::print_matrix() const {
         for(int j = 0; j < size; j++){
             cout << data[i][j];
         }
-        //cout << "\n" << endl;
+        cout << "\n";
     }
 }
