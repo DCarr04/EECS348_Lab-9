@@ -35,16 +35,11 @@ int main(int argc, char *argv[]) {
     cout << "Enter a file: ";
     cin >> file;
     ifstream myfile (file);
-    vector<vector<int> > nums;
-    vector<vector<int> > nums2;
     Matrix myMatrix(size);
     Matrix myMatrix2(size);
-    //string delimiter = " ";
     cout << "Got here" << endl;
     if (myfile.is_open()){
         cout << "Got here2" << endl;
-        //4-7 5:07; trying to create Matrix objects
-        //std::getLine(myfile, line);
         while(getline(myfile, line)){
             cout << "Got here3" << endl;
             int i = 0;
