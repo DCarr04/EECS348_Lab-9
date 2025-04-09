@@ -6,7 +6,7 @@
 #include <string>
 
 // all of your function definitions should be in this file now
-
+template <typename T>
 class Matrix {
 private: 
     size_t size;
