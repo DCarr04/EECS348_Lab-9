@@ -12,9 +12,9 @@ private:
     size_t size;
     
 public:
-    std::vector<std::vector<std::string> > data;
+    std::vector<std::vector<int> > data;
     Matrix(std::size_t N);
-    Matrix(std::vector<std::vector<std::string> > nums);
+    Matrix(std::vector<std::vector<int> > nums);
     ~Matrix();
 
     Matrix operator+(const Matrix &rhs) const;
