@@ -76,7 +76,12 @@ int main(int argc, char *argv[]) {
         if(nums2.size() != 0){
             Matrix myMatrix2(nums2);
         }*/
+        Matrix mathMatrix(size);
+        mathMatrix = myMatrix * myMatrix2;
         myMatrix.print_matrix();
+        myMatrix2.print_matrix();
+        mathMatrix.print_matrix();
+
     }
     myfile.close();
     
