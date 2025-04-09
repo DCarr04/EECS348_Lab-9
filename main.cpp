@@ -29,9 +29,8 @@ int main(int argc, char *argv[]) {
     int rowCounter = 0;
     int data;
     int size = 0;
-    //int sizeTracker = 0;
     int int_or_dbl;
-    //string preInt_data;
+    
     cout << "Enter a file: ";
     cin >> file;
     ifstream myfile (file);
@@ -57,23 +56,17 @@ int main(int argc, char *argv[]) {
                     for(int i = 0; i < entries.size(); i++){
                         data = stoi(entries[i]);
                         myMatrix.data[rowCounter][i] = data;
-                        cout << "Got here5.5" << endl;
                     }
                     ++rowCounter;
-                    cout << "Got here6" << endl;
 
                 }else{
-                    cout << "Got here7" << endl;
                     vector<string> entries = split(line, ' ');
                     for(int i = 0; i < entries.size(); i++){
                         data = stoi(entries[i]);
                         myMatrix2.data[rowCounter - size][i] = data;
                     }
                     ++rowCounter;
-                    cout << "Got here9" << endl;
                 }
-                cout << "Got here10" << endl;
-            
             }
             
             
