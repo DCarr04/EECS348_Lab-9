@@ -75,9 +75,9 @@ int main(int argc, char *argv[]) {
                         //preInt_data.push_back(line.substr(i, 2));
                         data = stoi(entries[i]);
                         cout << "\tdata at entries[i]:" << data << endl;
-                        cout << "\trowCounter:" << rowCounter << endl;
-                        cout << "\ti:" << i << endl;
-                        cout << "\tnums[0][0]:" << nums[0][0] << endl;
+                        //cout << "\trowCounter:" << rowCounter << endl;
+                        //cout << "\ti:" << i << endl;
+                        //cout << "\tnums[0][0]:" << myMatrix.data[0][0] << endl;
                         myMatrix.data[rowCounter][i] = data;
                         cout << "Got here5.5" << endl;
                         //preInt_data.pop_back();
@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
                         cout << "Got here8" << endl;
                         //preInt_data.push_back(line.substr(i, 2));
                         data = stoi(entries[i]);
-                        nums2[rowCounter - size][i] = data;
+                        myMatrix2.data[rowCounter - size][i] = data;
                         //preInt_data.pop_back();
                     }
                     ++rowCounter;
@@ -108,10 +108,10 @@ int main(int argc, char *argv[]) {
             
         }
         cout << "Got here11" << endl;
-        Matrix myMatrix(nums);
+       /*Matrix myMatrix(nums);
         if(nums2.size() != 0){
             Matrix myMatrix2(nums2);
-        }
+        }*/
         myMatrix.print_matrix();
     }
     myfile.close();
