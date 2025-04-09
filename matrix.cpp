@@ -13,12 +13,13 @@ using namespace std;
 Matrix::Matrix(size_t N) : size(N){
     // initialize an empty NxN matrix
     //size = N;
-    vector<vector<int> > nums;
-    for(int i = 0; i < size; i++){
+    vector<vector<int> > nums(N, vector<int>(N, 0));
+    data = nums;
+    /*for(int i = 0; i < size; i++){
         for(int j = 0; j < size; j++){
             data[i][j] = 0;
         }
-    }
+    }*/
     //data = nums;
 }
 

@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     string line;
     int rowCounter = 0;
     int data;
-    int size = 0;
+    int size = 1;
     //int sizeTracker = 0;
     int int_or_dbl;
     //string preInt_data;
@@ -55,6 +55,7 @@ int main(int argc, char *argv[]) {
                 cout << "Got here3.5" << endl;
                 //Matrix myMatrix(size);
                 Matrix myMatrix_mid(size);
+                cout << "Got here3.6" << endl;
                 myMatrix = myMatrix_mid;
                 myMatrix2 = myMatrix_mid;
                 //myMatrix.data[0][0] = 9;
