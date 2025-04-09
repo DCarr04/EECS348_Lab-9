@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
     string line;
     int rowCounter = 0;
     int data;
-    int size = 1;
+    int size = 0;
     //int sizeTracker = 0;
     int int_or_dbl;
     //string preInt_data;
