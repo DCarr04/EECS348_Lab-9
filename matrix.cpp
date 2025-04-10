@@ -10,8 +10,11 @@ using namespace std;
 
 // e.g. for the constructor:
 //Matrix::Matrix() : size(0){}
+template <typename T>
+using DataType = std::vector<Vector<T>>;
 
-Matrix::Matrix(size_t N) : size(N){
+template <typename T>
+Matrix::Matrix(size_t N) : size(N), data(N, Vector<T>(N)) {
     // initialize an empty NxN matrix
     //size = N;
     vector<vector<int> > nums(N, vector<int>(N, 0));
@@ -33,6 +36,11 @@ Matrix::~Matrix(){
     
 }
 // e.g. for a member function:
+
+template <typename T>
+Matrix Matrix::addition(const Matrix &rhs) const{
+
+}
 
 Matrix Matrix::operator+(const Matrix &rhs) const{
     Matrix sum_Matrix(rhs.size);
