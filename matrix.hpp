@@ -10,7 +10,7 @@
 class Matrix {
 private: 
     size_t size;
-    
+    /*
     template <typename T>
     class Vector {
     public:
@@ -18,14 +18,14 @@ private:
         Vector(size_t n) : data(n) {}
         T& operator[](size_t i) { return data[i]; }
         const T& operator[](size_t i) const { return data[i]; }
-    };
+    };*/
     
 public:
     
-    //std::vector<std::vector<int> > data;
-    template <typename T>
-    using DataType = std::vector<Vector<T>>;
-    
+    std::vector<std::vector<int> > data;
+    //template <typename T>
+   // using DataType = std::vector<Vector<T>>;
+
     Matrix(std::size_t N);
     Matrix(std::vector<std::vector<int> > nums);
     ~Matrix();

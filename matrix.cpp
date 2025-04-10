@@ -10,11 +10,10 @@ using namespace std;
 
 // e.g. for the constructor:
 //Matrix::Matrix() : size(0){}
-template <typename T>
-using DataType = std::vector<Vector<T>>;
 
-template <typename T>
-Matrix::Matrix(size_t N) : size(N), data(N, Vector<T>(N)) {
+
+
+Matrix::Matrix(size_t N) : size(N) {
     // initialize an empty NxN matrix
     //size = N;
     vector<vector<int> > nums(N, vector<int>(N, 0));
