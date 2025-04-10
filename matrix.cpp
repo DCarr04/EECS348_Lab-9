@@ -74,7 +74,7 @@ void Matrix<T>::set_value(size_t i, size_t j, T n){
     data[i][j] = n;
 }
 template <typename T>
-int Matrix<T>::get_value(size_t i, size_t j) const{
+T Matrix<T>::get_value(size_t i, size_t j) const{
     return data[i][j];
 }
 template <typename T>
@@ -82,7 +82,7 @@ int Matrix<T>::get_size() const{
     return size;
 }
 template <typename T>
-int Matrix<T>::sum_diagonal_major() const{
+T Matrix<T>::sum_diagonal_major() const{
     T total = 0;
     int rowCounter = size - 1;
     //int bottom_left = data[size - 1][0];
@@ -95,8 +95,8 @@ int Matrix<T>::sum_diagonal_major() const{
     //int top
 }
 template <typename T>
-int Matrix<T>::sum_diagonal_minor() const{
-    int total = 0;
+T Matrix<T>::sum_diagonal_minor() const{
+    T total = 0;
     int rowCounter = 0;
 
     for(int i = 0; i < size; i++){

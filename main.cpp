@@ -34,17 +34,24 @@ int main(int argc, char *argv[]) {
     cout << "Enter a file: ";
     cin >> file;
     ifstream myfile (file);
-    Matrix myMatrix(size);
-    Matrix myMatrix2(size);
+    Matrix<int> myMatrix(size);
+    Matrix<int> myMatrix2(size);
     if (myfile.is_open()){
         while(getline(myfile, line)){
             int i = 0;
             if (line.size() == 3){
                 size = stoi(line.substr(0));
                 int_or_dbl = stoi(line.substr(2));
-                Matrix myMatrix_mid(size);
-                myMatrix = myMatrix_mid;
-                myMatrix2 = myMatrix_mid;
+                if(int_or_dbl == 0){
+                    Matrix<int> myMatrix_mid(size);
+                    myMatrix = myMatrix_mid;
+                    myMatrix2 = myMatrix_mid;
+                }else{
+                    Matrix<double> myMatrix_mid(size);
+                    myMatrix = myMatrix_mid;
+                    myMatrix2 = myMatrix_mid;
+                }
+                
             }
             else if(line.size() == 0){
 
