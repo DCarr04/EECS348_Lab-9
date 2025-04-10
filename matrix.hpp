@@ -16,6 +16,9 @@ public:
     Matrix(std::size_t N);
     Matrix(std::vector<std::vector<int> > nums);
     ~Matrix();
+    
+    template <typename T>
+    Matrix addition(const Matrix &rhs) const;
 
     Matrix operator+(const Matrix &rhs) const;
     Matrix operator*(const Matrix &rhs) const;
