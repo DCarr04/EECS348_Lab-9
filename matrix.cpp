@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-using namespace std;
+using namespace std;//
 
 // implementation of functions declared in matrix.hpp goes here
 // function definitions for a class have their names prefixed with
