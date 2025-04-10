@@ -11,12 +11,25 @@ class Matrix {
 private: 
     size_t size;
     
+    template <typename T>
+    class Vector {
+    public:
+        std::vector<T> data;
+        Vector(size_t n) : data(n) {}
+        T& operator[](size_t i) { return data[i]; }
+        const T& operator[](size_t i) const { return data[i]; }
+    };
+    
 public:
-    std::vector<std::vector<int> > data;
+    
+    //std::vector<std::vector<int> > data;
+    template <typename T>
+    using DataType = std::vector<Vector<T>>;
+    
     Matrix(std::size_t N);
     Matrix(std::vector<std::vector<int> > nums);
     ~Matrix();
-    
+
     template <typename T>
     Matrix addition(const Matrix &rhs) const;
 
