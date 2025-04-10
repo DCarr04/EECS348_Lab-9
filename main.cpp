@@ -48,13 +48,13 @@ int main(int argc, char *argv[]) {
                     myMatrix2 = myMatrix_mid;
                 }else{
                     Matrix<double> myMatrix_mid(size);
-                    myMatrix = myMatrix_mid;
-                    myMatrix2 = myMatrix_mid;
+                    //myMatrix = myMatrix_mid;
+                    //myMatrix2 = myMatrix_mid;
                 }
                 
             }
             else if(line.size() == 0){
-
+                
             }
             else{
                 if(rowCounter < size){
@@ -83,7 +83,7 @@ int main(int argc, char *argv[]) {
         if(nums2.size() != 0){
             Matrix myMatrix2(nums2);
         }*/
-        Matrix mathMatrix(size);
+        Matrix<int> mathMatrix(size);
         mathMatrix = myMatrix * myMatrix2;
         myMatrix.print_matrix();
         myMatrix2.print_matrix();
